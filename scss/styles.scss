@@ -27,7 +27,7 @@ body, html, #__next {
 
   .layout-footer {
     padding: 50px;
-    background-color: lighten($light-grey, 20)
+    background-color: darken(#fff, 10)
   }
 }
 
@@ -44,7 +44,7 @@ body, html, #__next {
 }
 
 #contact-link {
-  color: lighten($color-red, 15);
+  color: lighten($color-blue, 15);
   border-radius: 4px;
   border: 2px solid darkgray;
   background: #fff;
@@ -90,8 +90,7 @@ body, html, #__next {
   box-shadow: 0 2px 5px rgba(20, 20, 20, 0.2);
   transition: all .2s ease;
   border-radius: 4px;
-  color: lighten($color-red, 10);
-  
+
   &:hover {
     box-shadow: 0 4px 4px rgba(20, 20, 20, 0.2);
     border-color: $light-grey;
@@ -101,7 +100,7 @@ body, html, #__next {
 }
 
 .home-hero {
-  background-image: url("https://unsplash.it/800/600")
+  padding-top: 100px;
 }
 
 .right-carousel-button {

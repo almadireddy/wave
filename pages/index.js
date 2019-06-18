@@ -4,7 +4,7 @@ import { Container, Row, Col, Jumbotron } from "reactstrap";
 import BigAction from '../components/bigAction';
 
 const strings = {
-  pageTitle: "Find your next home here.",
+  pageTitle: "Find your home.",
   service: "Buy, Sell, Invest."
 }
 
@@ -12,6 +12,7 @@ const Home = () => (
   <Layout className="home" title="Home" displayTitle="Home">
     <BigAction
         className="home-hero" 
+        big
         text={strings.pageTitle}
         smallText="Wave Realty"
         buttonText="See Featured Listings"
@@ -27,9 +28,9 @@ const Home = () => (
             <p className="lead mb-3">Two months free on studios in East Village.</p>
             <a href="/apply">Register Now</a>
           </Col>
-          {/* <Col sm='2'>
+          <Col sm='2'>
             <div className="right-carousel-button"></div>
-          </Col> */}
+          </Col>
         </Row>
       </Container>
     </Container>

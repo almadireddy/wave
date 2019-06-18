@@ -8,7 +8,7 @@ const BigAction = props => {
       <Row id="big-action-jumbotron">
         <Col sm="12">
           <p className="lead">{props.smallText}</p>
-          <h1 className="display-2">{props.text}</h1>
+          <h1 className={props.big ? "display-1" : "display-3"}>{props.text}</h1>
         </Col>
         <Col sm="12">
           <a href={props.buttonLink} className="call-to-action">{props.buttonText}</a>

@@ -45,9 +45,6 @@ export default class WaveNav extends React.Component {
                 <NavLink href="/about">About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/careers">Careers</NavLink>
-              </NavItem>
-              <NavItem>
                 <NavLink id='contact-link' href="/contact">Contact Us</NavLink>
               </NavItem>
             </Nav>
