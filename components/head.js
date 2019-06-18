@@ -31,6 +31,7 @@ const Head = props => (
     <meta property="og:image" content={props.ogImage || defaultOGImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900|Montserrat:500,700&display=swap" rel="stylesheet"></link>
   </NextHead>
 )
 

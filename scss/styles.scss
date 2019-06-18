@@ -1,3 +1,119 @@
+@import "vars";
+
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html, #__next {
+  min-height: 100vh;
+  font-family: "Lato", sans-serif
+}
+
+.lead {
+  font-weight: 900;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .layout-body {
+    flex: 1;
+    display: block
+  }
+
+  .layout-footer {
+    padding: 50px;
+    background-color: lighten($light-grey, 20)
+  }
+}
+
+.wave-nav {
+  margin: 15px 0;
+}
+
+.nav-link {
+  transition: all .2s ease;
+
+  @media (min-width: 768px) {
+    margin: 0 10px;
+  }
+}
+
+#contact-link {
+  color: lighten($color-blue, 15);
+  border-radius: 4px;
+  border: 2px solid darkgray;
+  background: #fff;
+  box-shadow: 0 2px 2px rgba(20, 20, 20, 0.2);
+  
+  &:hover {
+    box-shadow: 0 4px 4px rgba(20, 20, 20, 0.2);
+  }
+}
+
+#big-action-jumbotron {
+  background-color: #fff;
+  color: darken($light-grey, 20);
+  margin-bottom: 50px;
+  padding: 100px 0;
+
+  .lead {
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: lighten($light-grey, 10)
+  }
+
+  h1 {
+    margin-bottom: 75px;
+    font-family: "Lato";
+    font-weight: 300  
+  }
+}
+
+.listing-carousel {
+  padding: 25px 0;
+  background: darken(#fff, 10);
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.call-to-action {
+  padding: 10px 20px;
+  background: #fff;
+  border: 2px solid lighten($light-grey, 10);
+  box-shadow: 0 2px 2px rgba(20, 20, 20, 0.2);
+  transition: all .2s ease;
+  border-radius: 4px;
+  
+  &:hover {
+    box-shadow: 0 4px 4px rgba(20, 20, 20, 0.2);
+    border-color: $light-grey;
+    background: lighten($color-blue, 20);
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.home-hero {
+  background-image: url("https://unsplash.it/800/600")
+}
+
+.right-carousel-button {
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  background: #fff;
+  box-shadow: 0 2px 2px rgba(20, 20, 20, 0.2);
+  transition: all .2s ease;
+  cursor: pointer;  
+
+  &:hover {
+    box-shadow: 0 4px 4px rgba(20, 20, 20, 0.2);
+  }
 }

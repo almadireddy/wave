@@ -1,11 +1,15 @@
 import Hero from './hero'
 import Head from './head'
-import Nav from './nav'
+import WaveNav from './waveNav'
 import Layout from './layout'
+import Footer from './footer'
+import Header from './header'
 
 export {
   Hero,
   Head,
-  Nav,
-  Layout
+  WaveNav,
+  Layout,
+  Footer,
+  Header
 }
