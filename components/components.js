@@ -4,6 +4,9 @@ import WaveNav from './waveNav'
 import Layout from './layout'
 import Footer from './footer'
 import Header from './header'
+import BigAction from './bigAction'
+import HomeListing from './homeListing'
+import SingleHomeListing from './singleHomeListing'
 
 export {
   Hero,
@@ -11,5 +14,8 @@ export {
   WaveNav,
   Layout,
   Footer,
-  Header
+  Header,
+  BigAction,
+  HomeListing,
+  SingleHomeListing
 }

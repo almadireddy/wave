@@ -14,6 +14,7 @@ const BigAction = props => {
           <a href={props.buttonLink} className="call-to-action">{props.buttonText}</a>
         </Col>
       </Row>
+      {props.children}
     </Container>
   )
 }

@@ -11,6 +11,10 @@ body, html, #__next {
   font-family: "Lato", sans-serif
 }
 
+a {
+  transition: all .2s ease;
+}
+
 .lead {
   font-weight: 900;
 }
@@ -27,7 +31,8 @@ body, html, #__next {
 
   .layout-footer {
     padding: 50px;
-    background-color: darken(#fff, 10)
+    background-color: darken(#fff, 10);
+    margin-top: 100px;
   }
 }
 
@@ -44,7 +49,8 @@ body, html, #__next {
 }
 
 #contact-link {
-  color: lighten($color-blue, 15);
+  padding: 5px 15px;
+  color: lighten($color-dark-gray, 15);
   border-radius: 4px;
   border: 2px solid darkgray;
   background: #fff;
@@ -57,7 +63,7 @@ body, html, #__next {
 
 #big-action-jumbotron {
   background-color: #fff;
-  color: darken($light-grey, 20);
+  color: darken($color-light-grey, 20);
   margin-bottom: 50px;
   padding: 100px 0;
 
@@ -65,13 +71,14 @@ body, html, #__next {
     text-transform: uppercase;
     font-family: "Montserrat";
     font-weight: 500;
-    color: lighten($light-grey, 10)
+    color: lighten($color-dark-gray, 20)
   }
 
   h1 {
     margin-bottom: 75px;
     font-family: "Lato";
-    font-weight: 300  
+    font-weight: 300;
+    color: $color-black;
   }
 }
 
@@ -86,21 +93,22 @@ body, html, #__next {
 .call-to-action {
   padding: 10px 20px;
   background: #fff;
-  border: 2px solid lighten($light-grey, 10);
+  border: 2px solid lighten($color-light-grey, 10);
   box-shadow: 0 2px 5px rgba(20, 20, 20, 0.2);
   transition: all .2s ease;
   border-radius: 4px;
 
   &:hover {
     box-shadow: 0 4px 4px rgba(20, 20, 20, 0.2);
-    border-color: $light-grey;
-    color: #2b2b2b;
+    border-color: $color-blue;
+    background: $color-blue;
+    color: #fff;
     text-decoration: none;
   }
 }
 
 .home-hero {
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 .right-carousel-button {
@@ -114,5 +122,142 @@ body, html, #__next {
 
   &:hover {
     box-shadow: 0 4px 4px rgba(20, 20, 20, 0.2);
+  }
+}
+
+.buy-sell-listings {
+  justify-content: center;
+  align-items: center;
+  margin-top: -100px;
+  
+  .buy-sell-listing {
+    padding: 50px 25px;
+    margin-bottom: 25px;
+    
+    .accent-header {
+      color: $color-dark-gray;
+      margin-bottom: 15px;
+      font-weight: 300;
+      font-family: Montserrat;
+      text-transform: uppercase;
+    }
+
+    .listing-descripton {
+      font-weight: 300;
+    }
+
+    .listing-rate {
+      margin: 15px 0 35px 0;
+    }
+
+    a {
+      display: inline-block;
+      padding: 5px 15px;
+      background: transparent;
+      color: $color-dark-gray !important;
+      border-radius: 4px;
+      border: 2px solid $color-dark-gray;
+
+      &:hover {
+        background: $color-dark-gray;
+        color: #fff !important;
+      }
+    }
+  }
+
+  .listing-images {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+
+    img {
+      display: block;
+      width: 45%;
+      height: auto;
+      margin-right: 10px;
+    }
+  }
+
+  .buy-sell-right {
+    .buy-sell-listing {
+      padding: 100px 25px 300px 25px;
+      background: $color-light-grey;
+    }
+
+    .bg-map, .bg-img {
+      background: linear-gradient(to top, rgba(180, 180, 180, 0.4), rgba(240, 240, 240, 0.2)), url('https://unsplash.it/1280');
+      background-position: center center;
+      background-size: cover;
+      color: #fff;
+
+      a {
+        background: transparent;
+        border: 2px solid #fff;
+        color: #fff !important;
+        
+        &:hover {
+          background: #fff;
+          color: $color-dark-gray !important;
+        }
+      }
+
+      .accent-header {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.company-picture {
+  margin-top: 100px;
+  img.company {
+    border-radius: 4px;
+  }
+}
+
+.company-info {
+  text-align: center;
+  margin-top: -200px;
+  background: $color-light-grey;
+  padding: 50px;
+  border-radius: 4px;
+  box-shadow: 0 10px 100px rgba(180, 180, 180, 0.3), 0 0px 7px rgba(100, 100, 100, 0.4);
+
+  .lead {
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: $color-dark-gray; 
+    text-transform: uppercase;
+    margin-bottom: 35px;
+  }
+  
+  .customer-images {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 75px;
+
+    img {
+      margin: 0 10px;
+    }
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 25px;
+  }
+
+  p.customer-quote {
+    font-size: 22px;
+    font-weight: 300;
+    font-style: italic;
+    max-width: 80%;
+    margin: 0 auto 10px auto;
+  }
+  p.customer-name {
+    font-size: 20px;
+    font-style: italic;
   }
 }
