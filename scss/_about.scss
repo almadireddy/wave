@@ -3,3 +3,19 @@
   font-size: 24px;
   font-weight: 300;
 }
+
+.success-message, .error-message {
+  margin-top: 100px;
+  margin-bottom: -75px;
+}
+
+.invalid-email {
+  margin-bottom: 0px;
+  margin-top: 10px;
+  color: $color-red
+}
+
+.empty-message {
+  margin-top: 10px;
+  color: $color-red
+}

@@ -7,6 +7,7 @@ import Header from './header'
 import BigAction from './bigAction'
 import HomeListing from './homeListing'
 import SingleHomeListing from './singleHomeListing'
+import FormGroup from './formGroup';
 
 export {
   Hero,
@@ -17,5 +18,6 @@ export {
   Header,
   BigAction,
   HomeListing,
-  SingleHomeListing
+  SingleHomeListing,
+  FormGroup
 }
