@@ -141,7 +141,7 @@ export default class Connect extends Component {
                   <FormGroup>
                     <ReCaptcha
                       size='normal'   
-                      sitekey="6Lcvd5kUAAAAAPX2tL26dedSCt8pG-99r_U-B6bs"
+                      sitekey="6LdvyakUAAAAAAmnzR9w4Giz8_UlXrQbbEHLc684"
                       onChange={this.onRecaptchaChange}
                     />
                   </FormGroup>
