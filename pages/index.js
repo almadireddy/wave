@@ -8,9 +8,12 @@ const strings = {
 }
 
 const Home = () => (
-  <Layout className="home" title="Home" displayTitle="Home">
+  <Layout 
+    className="home" 
+    title="Home" 
+    displayTitle="Home">
     <BigAction
-        className="home-hero" 
+        className="hero" 
         big
         text={strings.pageTitle}
         smallText="Wave Realty"

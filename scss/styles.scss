@@ -1,4 +1,6 @@
 @import "vars";
+@import "type";
+@import "about";
 
 * {
   box-sizing: border-box;
@@ -11,12 +13,13 @@ body, html, #__next {
   font-family: "Lato", sans-serif
 }
 
-a {
-  transition: all .2s ease;
+img {
+  box-shadow: 0 2px 15px rgba(70, 70, 70, 0.2);
+  border-radius: 4px;
 }
 
-.lead {
-  font-weight: 900;
+.row {
+  margin-bottom: 100px;
 }
 
 .layout {
@@ -61,6 +64,14 @@ a {
   }
 }
 
+.big-action {
+  margin-bottom: 100px;
+}
+
+.big-action-children {
+  margin-top: -50px;
+}
+
 #big-action-jumbotron {
   background-color: #fff;
   color: darken($color-light-grey, 20);
@@ -85,7 +96,16 @@ a {
 .listing-carousel {
   padding: 25px 0;
   background: darken(#fff, 10);
+  
+  .lead {
+    font-weight: 300;
+  }
+  
   p {
+    margin-bottom: 0;
+  }
+
+  .row {
     margin-bottom: 0;
   }
 }
@@ -107,7 +127,7 @@ a {
   }
 }
 
-.home-hero {
+.hero {
   padding-top: 50px;
 }
 
@@ -219,7 +239,9 @@ a {
 
 .company-info {
   text-align: center;
-  margin-top: -200px;
+  @media (min-width: 768px) {
+    margin-top: -300px;
+  }
   background: $color-light-grey;
   padding: 50px;
   border-radius: 4px;

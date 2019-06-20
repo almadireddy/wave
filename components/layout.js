@@ -1,8 +1,8 @@
 import React from 'react'
 import { string } from 'prop-types'
 import { Hero, Nav, Header, Footer, Head } from './components'
-import "../scss/styles.scss"
 import 'bootstrap/scss/bootstrap.scss';
+import "../scss/styles.scss"
 
 const Layout = props => (
   <div className="layout">
