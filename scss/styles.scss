@@ -1,6 +1,7 @@
 @import "vars";
 @import "type";
 @import "about";
+@import "listings";
 
 * {
   box-sizing: border-box;
@@ -100,7 +101,7 @@ img {
   .lead {
     font-weight: 300;
   }
-  
+    
   p {
     margin-bottom: 0;
   }

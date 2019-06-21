@@ -12,14 +12,3 @@ const Apply = () => {
 }
 
 export default Apply;
-
-/*
-
-Layout.propTypes = {
-  displayTitle: string,
-  title: string,
-  description: string,
-  url: string,
-  ogImage: string
-}
-*/

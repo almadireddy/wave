@@ -1,0 +1,24 @@
+.listing-row {
+  box-shadow: 0 3px 15px rgba(50, 50, 50, 0.2);
+  padding: 50px 25px;
+
+  img {
+    margin-bottom: 25px;
+  }
+
+  .listing-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .rent-info {
+      text-align: right;
+
+      .call-to-action {
+        display: block;
+        margin-top: 10px;
+        text-align: center;
+      }
+    }
+  }
+}
