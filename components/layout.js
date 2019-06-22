@@ -5,7 +5,7 @@ import 'bootstrap/scss/bootstrap.scss';
 import "../scss/styles.scss"
 
 const Layout = props => (
-  <div className="layout">
+  <div className={props.className + " layout"}>
     <div className='layout-header'>
       <Head title={props.title} 
             description={props.description}

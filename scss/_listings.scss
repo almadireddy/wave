@@ -3,6 +3,10 @@
   padding: 25px;
   border-radius: 4px;
   margin-bottom: 25px;
+
+  .listing-address-container {
+    margin-bottom: 25px;
+  }
   img {
     margin-bottom: 25px;
   }
@@ -23,11 +27,44 @@
     align-items: center;
     margin-bottom: 0;
     margin-top: 15px;
+
+    .call-to-action {
+      background: transparent;
+      border: 2px solid $color-dark-gray;
+      color: #fff !important;
+      background: $color-dark-gray;
+      
+      &:hover {
+        background: #fff;
+        color: $color-dark-gray !important;
+      }
+    }
   }
 }
 
-.listing-lead {
-  font-size: 22px;
-  font-style: italic;
-  margin-top: -150px;
+.listing-page {
+  .listing-featured-img {
+    margin-top: -100px;
+  }
+  
+  .listing-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 25px;
+
+    .listing-city {
+      font-size: 25px;
+    }
+    .listing-state {
+      font-size: 22px;
+    }
+  }
+  
+  .listing-lead {
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-style: italic;
+    font-weight: 300;
+  }
 }

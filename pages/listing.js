@@ -25,12 +25,7 @@ export default class Listing extends React.Component {
         title={address} 
         displayTitle={address}>
         <Container>
-          <BigAction text={address} bid>
-            <Row>
-              <Col sm="7">
-                <p className="listing-lead">{description}</p>
-              </Col>
-            </Row>
+          <BigAction text={address} big smallText={sqft + " sqft. " + bedrooms + " beds, " + bathrooms + " baths "}>
           </BigAction>
           <Row className="justify-content-center">
             <Col>
@@ -40,18 +35,22 @@ export default class Listing extends React.Component {
                 </div>
                 <div className="listing-info">
                   <div className="location-info">
-                    <h2 className="listing-address">{address}</h2>
-                    <p className='listing-neighborhood lead'>{neighborhood}</p>
-                    <p>{city}</p>
-                    <p>{state}</p>
+                    {neighborhood &&
+                      <p className='listing-neighborhood lead'>{neighborhood}</p>
+                    }
+                    <p className="listing-city">{city}</p>
+                    <p className="listing-state">{state}</p>
                   </div>
                   <div className="rent-info">
                     <h2>${rateMonthly}/mo</h2>
-                    <p className="lead">{sqft} sqft.</p>
-                    {console.log(id)}
                   </div>
                 </div>
               </div>
+            </Col>
+          </Row>
+          <Row className="justify-content-center">
+            <Col md="8">
+              <p className="listing-lead">{description}</p>
             </Col>
           </Row>
         </Container>
