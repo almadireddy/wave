@@ -14,6 +14,15 @@ export default class Listing extends React.Component {
     const res = await fetch(`https://wave-cms.herokuapp.com/listings/${id}`)
     const listing = await res.json();  
 
+    let gallery = []
+    for (let i = 1; i < 6; i++) {
+      if (listing["gallery_image_" + i] != null) {
+        gallery.push(listing["gallery_image_" + i])
+      }
+    }
+
+    listing.gallery = gallery;
+    console.log(listing)
     return {listing};
   }
 
@@ -52,6 +61,13 @@ export default class Listing extends React.Component {
             <Col md="8">
               <p className="listing-lead">{description}</p>
             </Col>
+          </Row>
+          <Row className="justify-content-center">
+            {this.props.listing.gallery.map(image => (
+              <Col md="6">
+                <img className="img-fluid" src={image.url}></img>
+              </Col>
+            ))}
           </Row>
         </Container>
       </Layout>
