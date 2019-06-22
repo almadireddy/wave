@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {Container, Row, Col} from 'reactstrap'
-
+import Link from "next/link";
 const BigAction = props => {
   return (
     <Container className={"big-action " + props.className}>
