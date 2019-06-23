@@ -29,8 +29,6 @@ export default class Listings extends React.Component {
   }
 
   render() {
-    console.log(this.props.listings);
-
     return (
       <Layout 
         className="listings" 

@@ -33,9 +33,9 @@ export default class Listing extends React.Component {
         className='listing-page'
         title={address} 
         displayTitle={address}>
+        <BigAction text={address} big smallText={sqft + " sqft. " + bedrooms + " beds, " + bathrooms + " baths "}>
+        </BigAction>
         <Container>
-          <BigAction text={address} big smallText={sqft + " sqft. " + bedrooms + " beds, " + bathrooms + " baths "}>
-          </BigAction>
           <Row className="justify-content-center">
             <Col>
               <div className="listing">

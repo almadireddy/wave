@@ -19,3 +19,25 @@
   margin-top: 10px;
   color: $color-red
 }
+
+.exec-bios {
+  .exec {
+    .name {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    img {
+      margin-bottom: 15px;
+    }
+
+    .title {
+      margin-bottom: 10px;
+      font-weight: 300; 
+    }
+
+    .bio {
+      font-weight: 300;
+    }
+  }
+}
