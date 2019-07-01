@@ -1,6 +1,6 @@
 import React from 'react'
-import { Layout, BigAction, HomeListing } from '../components/components'
-import { Container, Row, Col, Jumbotron } from "reactstrap";
+import { Layout, BigAction } from '../components/components'
+import { Container, Row, Col } from "reactstrap";
 import fetch from "node-fetch";
 
 export default class About extends React.Component {

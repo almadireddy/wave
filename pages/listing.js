@@ -4,6 +4,9 @@ import fetch from "node-fetch";
 import Layout from '../components/layout';
 import { Container, Row, Col } from "reactstrap";
 import BigAction from '../components/bigAction';
+
+import { chunk } from "../functions";
+
 export default class Listing extends React.Component {
   constructor() {
     super();
@@ -21,7 +24,7 @@ export default class Listing extends React.Component {
       }
     }
 
-    listing.gallery = gallery;
+    listing.gallery = chunk(gallery, 2);
     console.log(listing)
     return {listing};
   }
@@ -62,13 +65,17 @@ export default class Listing extends React.Component {
               <p className="listing-lead">{description}</p>
             </Col>
           </Row>
-          <Row className="justify-content-center">
-            {this.props.listing.gallery.map(image => (
-              <Col md="6">
-                <img className="img-fluid" src={image.url}></img>
-              </Col>
-            ))}
-          </Row>
+        </Container>
+        <Container>
+          {this.props.listing.gallery.map(imageRow => (
+            <Row className="justify-content-center">
+              {imageRow.map((image) => (
+                <Col md="6">
+                  <img className="img-fluid" src={image.url}></img>
+                </Col>
+              ))} 
+            </Row>
+          ))}
         </Container>
       </Layout>
     )
