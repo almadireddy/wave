@@ -31,38 +31,50 @@ export default class Listing extends React.Component {
 
   render() {
     const { address, neighborhood, city, state, bedrooms, bathrooms, sqft, rateMonthly, description, featured_image, id } = this.props.listing;
+
+    let smallText = bedrooms + " beds, " + bathrooms + " baths "
     return (
       <Layout
         className='listing-page'
         title={address} 
         displayTitle={address}>
-        <BigAction text={address} big smallText={sqft + " sqft. " + bedrooms + " beds, " + bathrooms + " baths "}>
+        <BigAction text={address} big>
+          <Row>
+            <Col md="8">
+              <p className="listing-lead">{description}</p>
+            </Col>
+          </Row>
         </BigAction>
         <Container>
-          <Row className="justify-content-center">
-            <Col>
+          <Row>
+            <Col md="8">
               <div className="listing">
                 <div className="listing-featured-img">
                   <img className="img-fluid" src={featured_image.url}></img>
                 </div>
-                <div className="listing-info">
-                  <div className="location-info">
-                    {neighborhood &&
-                      <p className='listing-neighborhood lead'>{neighborhood}</p>
-                    }
-                    <p className="listing-city">{city}</p>
-                    <p className="listing-state">{state}</p>
-                  </div>
-                  <div className="rent-info">
-                    <h2>${rateMonthly}/mo</h2>
-                  </div>
-                </div>
               </div>
             </Col>
-          </Row>
-          <Row className="justify-content-center">
-            <Col md="8">
-              <p className="listing-lead">{description}</p>
+            <Col md="4">
+              <div className="listing-info">
+                <h3 className="heading">Details</h3>
+                <div className="rent-info">
+                  <h2>${rateMonthly}/mo</h2>
+                  {sqft && 
+                    <h3>{sqft} sqft</h3>
+                  }
+                </div>
+                <div className="location-info">
+                  {neighborhood &&
+                    <p className='listing-neighborhood lead'>{neighborhood}</p>
+                  }
+                  <p className="listing-city">{city}</p>
+                  <p className="listing-state">{state}</p>
+                </div>
+                <div className="bed-bath">
+                  <p>{bedrooms} bedrooms</p>
+                  <p>{bathrooms} bathrooms</p>
+                </div>
+              </div>
             </Col>
           </Row>
         </Container>

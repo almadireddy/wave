@@ -26,7 +26,7 @@ export default class Listings extends React.Component {
               text="Listings"
               big>
               {this.props.listings.map((row) => (
-                <Row className="">
+                <Row className="listing-row">
                   {row.map(l => (
                     <Col md='6'>
                       <Listing key={l.id} listing={l}></Listing>

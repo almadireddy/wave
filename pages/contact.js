@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import ReCaptcha from "react-google-recaptcha";
 import fetch from "node-fetch";
 import {Layout, BigAction} from '../components/components';
-import {FormGroup, Container, Row, Col, Button, Form, Label, Input, FormText} from 'reactstrap';
+import {FormGroup, Container, Row, Col, Button, Label, Input} from 'reactstrap';
 
 export default class Connect extends Component {
   constructor(props) {
@@ -102,7 +102,7 @@ export default class Connect extends Component {
             <Row>
               <Col>
                 <h2>Connect with Wave Realty!</h2>
-                <p>We'd love to get started Fugiat non magna aliquip eu Lorem commodo anim amet ea ullamco.!</p>
+                <p>Please indicate the address of the listing you are interested about!</p>
                   {this.state.displaySuccessMessage &&
                     <div className='success-message'>
                       <h3 className='text-success'>Thanks for reaching out! 🎉</h3>
